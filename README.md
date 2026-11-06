@@ -14,7 +14,7 @@ The pipeline extracts movie and rating data from the MovieLens dataset, transfor
 * Pandas
 * SqlAlchemy
 * MySQL
-*OMDb API
+* OMDb API
 
 
 ## 3.Dataset
@@ -25,8 +25,7 @@ Source: https://files.grouplens.org/datasets/movielens/ml-latest-small.zip
 The dataset contains:
 
 * 9,742 movies
-* 100,835 ratings
-
+* 100,836 ratings
 ## 4. ETL Pipeline
 
 ### Extract
@@ -56,7 +55,7 @@ The dataset contains:
 
 ## 5.Database Design
 
-The database contains fout tables:
+The database contains four tables:
 
 | Tables | Purpose |
 |:-------:|:-------:|
@@ -101,19 +100,13 @@ Successfully loaded the following record into MySQL:
 ## 9. Project Structure
 
 ```text
-movie-data-pipeline/
-├── data/
-│   ├── raw/          
-│   ├── movies.csv      
-│   ├── ratings.csv          
-│   ├── omdb_cache.json
-|   └── omdb_usage.json         
+movie-data-pipeline/        
 ├── etl.py           
 ├── schema.sql
 ├── queries.sql
 ├── requirements.txt
 ├── README.md 
-└── .gitigonre
+└── .gitignore
 ```
 
 
@@ -128,7 +121,7 @@ movie-data-pipeline/
 ### Step 2 : Go the the project directory
 
 ```bash
-  cd my-project
+  cd movie-data-pipeline
 ```
 
 ### Step 3 : Install dependencies
@@ -149,7 +142,7 @@ OMDB_API_KEY=your_omdb_api_key
 ```
 
 ### Step 5 : Create the database
-Run schemas.sql in MySQL to create the database and tables.
+Run *schema.sql* in MySQL to create the database and tables.
 
 
 ### Step 6 : Run the ETL Pipeline
@@ -178,7 +171,7 @@ Running the ETL pipeline multiple times could result in unnecessary API calls fo
 Solution: Checked the cache before making an API request. Previously fetched results are reused.
 
 
-## 12. Future Imporvements
+## 12. Future Improvements
 
 * Add automated ETL scheduling.
 * Implement better logging and error handling.
