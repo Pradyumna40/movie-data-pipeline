@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS movies (
 -- 2.Genres Table
 CREATE TABLE IF NOT EXISTS genres (
     genre_id INT AUTO_INCREMENT PRIMARY KEY,
-    genre_name = VARCHAR(100) NOT NULL UNION
+    genre_name = VARCHAR(100) NOT NULL UNIQUE
 
 )ENGINE=InnoDB;
 
