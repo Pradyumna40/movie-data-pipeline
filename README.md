@@ -157,14 +157,14 @@ mysql -u root -p --table movie_analytics < queries.sql
 ```
 ## 11. Challenges faced and solutions
 
-# 1. OMDb API request limits
+### 1. OMDb API request limits
 
 Fetching movie details for thousands of movies can consume the available daily API requests.
 
 Solution: Implemented JSON-based caching and daily API usage tracking to avoid repeated requests 
 
 
-# 2. Repeated API requests
+### 2. Repeated API requests
 
 Running the ETL pipeline multiple times could result in unnecessary API calls for movies whose details had already been fetched.
 
